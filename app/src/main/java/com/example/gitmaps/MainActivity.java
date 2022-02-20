@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMapView.getMapAsync(this);
         if (checkMapServices() &&!mLocationPermissionGranted ) {
             getLocationPermission();
-  }
+        }
         mMapView.onCreate(mapViewBundle);
     }
 
@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     mLocationPermissionGranted = true;
-                //    getLastKnownLocation();
+                    //    getLastKnownLocation();
                 }
             }
         }
@@ -190,7 +190,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             case 9002: {
                 if (mLocationPermissionGranted) {
 
-                  //  getLastKnownLocation();
+                    //  getLastKnownLocation();
                 } else {
                     getLocationPermission();
                 }
@@ -218,17 +218,14 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onResume();
         mMapView.onResume();
 //getLastKnownLocation();
-       // mMapView.onCreate(null);
-            // use this current location
+        // mMapView.onCreate(null);
+        // use this current location
 
 
 /*
       if (checkMapServices()) {
             if (mLocationPermissionGranted) {
-
-
                 getLastKnownLocation();
-
             } else {
                 getLocationPermission();
             }
@@ -256,7 +253,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
             return;
         }
-       // map.setMyLocationEnabled(true);
+        // map.setMyLocationEnabled(true);
         FusedLocationProviderClient fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         fusedLocationProviderClient.getCurrentLocation(PRIORITY_HIGH_ACCURACY, new CancellationToken() {
             @Override
