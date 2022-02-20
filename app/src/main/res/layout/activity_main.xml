@@ -9,15 +9,9 @@
 
     <com.google.android.gms.maps.MapView
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="match_parent"
         android:id="@+id/mapid"
         />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="anything"
-        android:textSize="40dp"
-        android:textColor="@color/black"
-        />
+
 
 </LinearLayout>
