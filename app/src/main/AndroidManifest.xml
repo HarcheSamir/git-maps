@@ -2,10 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gitmaps">
 
-    <uses-permission
-        android:name="android.permission.ACCESS_COARSE_LOCATION"
-        />
-    <uses-permission    android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -15,14 +13,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gitmaps">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".firstactivity"
+            android:exported="true"
+
+            >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
+
+
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+        </activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDrUPKm1AHKUbfmPy1uOeYOH3pwXMVxnZ8" />

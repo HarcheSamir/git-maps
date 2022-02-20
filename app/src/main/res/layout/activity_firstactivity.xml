@@ -3,20 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
 
-    <com.google.android.gms.maps.MapView
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:id="@+id/mapid"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#900"
-        />
+    tools:context=".firstactivity">
+    <Button
+        android:text="hello"
+        android:id="@+id/btnid"
+        android:textColor="@color/white"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
 
+        />
 
 </LinearLayout>
