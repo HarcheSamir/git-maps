@@ -87,11 +87,11 @@ public class firstactivity extends AppCompatActivity {
                 return null;
             }
         }).addOnSuccessListener(location -> {
-          //  Toast.makeText(this, location.getLatitude() +"", Toast.LENGTH_SHORT).show();
+           Toast.makeText(this, location.getLatitude() +"**"+ location.getLongitude(), Toast.LENGTH_SHORT).show();
             GeoPoint geopoint = new GeoPoint(location.getLatitude(), location.getLongitude());
             coordinates.putDouble("latitude" , geopoint.getLatitude());
             coordinates.putDouble("longitude" , geopoint.getLongitude());
-            Toast.makeText(firstactivity.this, location.getLatitude()+"", Toast.LENGTH_LONG).show();
+         //   Toast.makeText(firstactivity.this, location.getLatitude()+"", Toast.LENGTH_LONG).show();
             LatLng sydney = new LatLng(geopoint.getLatitude(), geopoint.getLongitude());
 
             // use this current location

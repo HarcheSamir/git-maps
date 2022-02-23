@@ -37,12 +37,14 @@ import com.google.android.gms.tasks.OnTokenCanceledListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.GeoPoint;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
     MapView mMapView;
     GoogleMap map;
-
+List<location> locs = new ArrayList<>();
     boolean mLocationPermissionGranted = false;
 
     @Override
@@ -99,10 +101,23 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             return;
         }
         map.setMyLocationEnabled(true);
-         Location location = new Location("yourprovidername");
+       /*  Location location = new Location("yourprovidername");
         location.setLatitude(getIntent().getExtras().getDouble("latitude"));
         location.setLongitude(getIntent().getExtras().getDouble("longitude"));
-      map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(getIntent().getExtras().getDouble("latitude"), getIntent().getExtras().getDouble("longitude")), 16f));
+        locs.add(new location(38.0 , 10.0));
+        locs.add(new location(37.0 , 10.0));
+        locs.add(new location(35.0 , 10.0));
+        locs.add(new location(34.0 , 10.0));
+        locs.add(new location(32.0 , 10.0));
+        locs.add(new location(31.0 , 10.0));
+        locs.add(new location(39.0 , 10.0));
+        locs.add(new location(40.0 , 10.0));
+*/
+      /*  for( int i = 0 ;  i< locs.size() ; i++)
+        {
+            Toast.makeText(this, locs.get(i).getLatitude() +"", Toast.LENGTH_SHORT).show();
+        }*/
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(getIntent().getExtras().getDouble("latitude"), getIntent().getExtras().getDouble("longitude")), 16f));
     }
 
 
